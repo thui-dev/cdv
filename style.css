@@ -1,0 +1,163 @@
+
+/*
+https://fonts.google.com/selection?query=fredoka
+*/
+
+:root{
+    --bg-primary: #1E95B3;
+    --bg-secondary: #EBEEF1;
+    --header-height: 4.5rem;
+    
+    color: black;
+    background-color: var(--bg-secondary);
+
+    font-size: 20px;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300; /*medium*/
+    font-style: normal;
+    font-variation-settings: 
+      "wdth" 100; /*normal*/
+      line-height: 150%;
+
+}
+
+html, body{
+    margin:0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar{
+    width: 0rem;
+}
+body::-webkit-scrollbar-track{
+    background: var(--bg-secondary);
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--bg-primary);
+}
+
+
+header{    
+    position: fixed;
+    top: 0px;
+
+    align-content: center;
+    text-align: center;
+    height: var(--header-height);
+    width: 100vw;
+    background-color: var(--bg-primary);
+}
+
+#menu-open-icon {
+    color: white;
+
+    position: absolute;
+    left: 5px;
+    font-size: calc(var(--header-height)/1.6);
+    margin: calc(var(--header-height)/6);
+    cursor: pointer;
+}
+
+#menu-close-icon {
+    position: fixed;
+    overflow-y: hidden;
+    margin: 10px;
+    transform: translateX(230px);
+    top: 0;
+    font-size: 3.2rem;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0 0 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+#fade-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgba(0, 0, 0, 0.298);
+    z-index: 1;
+}
+
+@keyframes slideIn {
+    0% {
+      left: -100%; /* Start from outside the frame */
+    }
+    100% {
+      left:0;
+    }
+  }
+
+@keyframes slideOut {
+    0% {
+        left: 0; /* Start from outside the frame */
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+#navbar-nav{
+    position: absolute;
+    width: 100%;
+
+    padding: 10px;
+    left: -100%;
+    
+    width: 300px;
+    height: 100vh;
+    
+    color: white;
+    font-size: 220%;
+    background-color: var(--bg-primary);
+
+    z-index: 2;
+}
+
+main{
+    margin: calc(var(--header-height)*1.15) 15px 0px 15px; /*accounting for hader*/
+    padding: 0;
+    text-align: justify;
+    
+    z-index: 0;
+}
+
+h1 {
+    margin: 10px;
+
+    font-size: 40px;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500; /*medium*/
+    font-style: normal;
+    font-variation-settings: 
+      "wdth" 100; /*normal*/
+  }
+
+p {
+    margin: 5px;
+    text-indent: 25px;
+    
+    font-size: 20px;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300; /*medium*/
+    font-style: normal;
+    font-variation-settings: 
+      "wdth" 100; /*normal*/
+      line-height: 150%;
+
+  }
+
+
+  
