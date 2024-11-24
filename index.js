@@ -14,6 +14,7 @@ function open_navbar(){
 
     console.log(window.scrollY)
     el.style.top = `${window.scrollY}px`
+    el.scrollTop = 0;
 
     el.style.animation = 'slideIn .5s';
     el.style.animationTransitionTimingFunction = "cubic-bezier(.4,0,.2,1)";
